@@ -31,6 +31,7 @@ import com.mongodb.util.JSON;
 public class App
 {
     public static void main( String[] args ){
+    	
         String pathToHFile="/Users/Shreya/Desktop/hdfs-output.txt";
         String pathToKafkaFile="/Users/Shreya/Desktop/kafka-output.txt";
 
@@ -79,7 +80,8 @@ public class App
                 budget=bson.get("budget").toString();
                 demographicsCity=bson.get("city").toString();
                 
-             
+
+                //Populate the final JSON Object to be inserted in the MongoDB Collection
                 outputDoc.put("productCategory", productCategory);
                 outputDoc.put("demographicsAgeMax", demographicsAgeMax);
                 outputDoc.put("demographicsAgeMin", demographicsAgeMin);
